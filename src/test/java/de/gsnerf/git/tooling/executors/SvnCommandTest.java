@@ -21,11 +21,10 @@ public class SvnCommandTest {
         SvnCommand command = new SvnCommand();
 
         // act
-        List<String> result = command.execute( params ).getError();
+        List<String> result = command.execute( params ).getOutput();
 
         // assert
         assertThat( result, is( not( empty() ) ) );
-        fail( "The test case is a prototype." );
     }
 
 }
