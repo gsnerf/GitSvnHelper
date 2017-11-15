@@ -20,6 +20,12 @@ public class GitSvnCommand {
         // nothing to do for now
     }
 
+    /**
+     * Execute git-svn with the given parameters
+     * @param params list of parameters to be passed to git-svn
+     * @return the {@link CommandResult} containing the processes outputs
+     * @throws IOException if anything happened while running the process
+     */
     public CommandResult execute( String... params ) throws IOException {
         List<String> command = new ArrayList<>();
         command.add( gitCommand );
