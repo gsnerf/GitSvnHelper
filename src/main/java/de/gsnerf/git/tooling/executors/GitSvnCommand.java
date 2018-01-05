@@ -1,5 +1,6 @@
 package de.gsnerf.git.tooling.executors;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,8 +17,14 @@ public class GitSvnCommand {
     private final String gitCommand = "git";
     private final String svnPlugin = "svn";
 
+    private final File workingDirectory;
+
     public GitSvnCommand() {
-        // nothing to do for now
+        this(new File("."));
+    }
+    
+    public GitSvnCommand( File workingDirectory ) {
+        this.workingDirectory = workingDirectory;
     }
 
     /**
@@ -31,6 +38,6 @@ public class GitSvnCommand {
         command.add( gitCommand );
         command.add( svnPlugin );
         command.addAll( Arrays.asList( params ) );
-        return Command.execute( command );
+        return Command.execute( workingDirectory, command );
     }
 }
