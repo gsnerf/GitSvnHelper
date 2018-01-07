@@ -30,7 +30,7 @@
     <repositories>
         <repository>
             <id>ProjectRepo</id>
-            <url>file://repository</url>
+            <url>file://libs</url>
         </repository>
     </repositories>
 
