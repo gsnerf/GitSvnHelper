@@ -78,7 +78,7 @@
         </dependency>
         <dependency>
             <groupId>com.approvaltests</groupId>
-            <artifactId>ApprovalTests.java</artifactId>
+            <artifactId>ApprovalTests.Java</artifactId>
             <version>0.19</version>
             <scope>test</scope>
         </dependency>
